@@ -51,5 +51,5 @@ app.post('/failure', function(req, res){
 })
 
 app.listen(process.env.PORT || 3000, function(){
-    console.log("server is online boi! Go to https://localhost:3000")
+    console.log("server is online boi! Go to http://localhost:3000")
 })
