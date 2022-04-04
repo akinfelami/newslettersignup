@@ -47,6 +47,7 @@ app.post("/", function(req, res){
 });
 
 app.post('/failure', function(req, res){
+    console.log(res)
     res.redirect("/")
 })
 
