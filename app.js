@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("public"))
 
 const apikey = process.env.API_KEY
-const listId = process.env.LIST_ID
 
 app.get("/", function(req, res){
     res.sendFile(__dirname + "/signup.html")
@@ -29,7 +28,7 @@ app.post("/", function(req, res){
 
 
     const run = async () => {
-        const response = await mailchimp.lists.batchListMembers(listId, {
+        const response = await mailchimp.lists.batchListMembers("4a63955524", {
             members: [
                 {
                     email_address: emailAddress,
